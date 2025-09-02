@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-df = pd.read_csv("data/IMLP4_13-product_reviews_full.csv")
+df = pd.read_csv("ml-product-reviews-project/data/IMLP4_13-product_reviews_full.csv")
 
 # Drop all rows with missing values
 df = df.dropna()
@@ -42,6 +42,6 @@ pipeline = Pipeline([
 pipeline.fit(x, y)
 
 # Save the model to a file
-joblib.dump(pipeline, "model/sentiment_model.pkl" )
+joblib.dump(pipeline, "ml-product-reviews-project/model/sentiment_model.pkl" )
 
-print("Model trained and saved as 'model/sentiment_model.pkl' ")
+print("Model trained and saved as 'ml-product-reviews-project/model/sentiment_model.pkl' ")
